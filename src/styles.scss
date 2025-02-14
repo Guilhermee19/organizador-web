@@ -1,1 +1,49 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'assets/styles/_scroll.scss';
+@import 'assets/styles/fw2svg.scss';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: 'Mulish', sans-serif !important;
+}
+
+html,
+body {
+  height: 100%;
+
+  /* -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; */
+}
+body {
+  margin: 0;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.tag{
+  @apply absolute top-0 right-0 py-2 px-4 rounded-es-3xl bg-primary;
+
+  &:after{
+    content: '';
+    box-shadow: 0.5rem -0.5rem #1e293b;
+    @apply w-7 h-7 absolute top-0 -left-7 rounded-se-3xl shadow-primary;
+  }
+
+  &:before{
+    content: '';
+    box-shadow: 0.5rem -0.5rem #1e293b;
+    @apply w-7 h-7 absolute top-10 right-0 rounded-se-3xl shadow-primary;
+  }
+}
